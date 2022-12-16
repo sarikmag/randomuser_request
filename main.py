@@ -26,7 +26,5 @@ def get_user_name():
 
 
 
-# Get the user's name and age
-user = get_user_name()
-# Print the user's name and age
-print(user)
+# Define users list
+users = []
