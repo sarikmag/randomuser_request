@@ -32,6 +32,8 @@ users = []
 # Get 10 users
 for i in range(10):
     # Get the user's name and age
+    # Print request info
+    print(f'Getting user {i+1}...')
     user = get_user_name()
     # Add the user to the list
     users.append(user)
