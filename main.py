@@ -41,5 +41,3 @@ for i in range(number_of_requests):
     if gender=='male':
         users.append(user)
 
-# Print the list of users
-print(len(users))
