@@ -1,9 +1,32 @@
 import requests
 
-# URL to randomuser.me API
-url = "https://randomuser.me/api/"
+def get_user_name():
+    # URL to randomuser.me API
+    url = "https://randomuser.me/api"
+    # Send a GET request to the API
+    response = requests.get(url)
+    # Convert the response to JSON format
+    data = response.json()
+    # Get the results from the JSON data
+    results = data["results"]
+    # Get the first name
+    first_name = results[0]["name"]["first"]
+    # Get the last name
+    last_name = results[0]["name"]["last"]
+    # Get the age
+    age = results[0]["dob"]["age"]
 
-# Send a GET request to the API
-response = requests.get(url)
-# Print the status code of the response.
-print(response.status_code)
+    # Return the user's name and age
+    answer = {
+        "first_name": first_name,
+        "last_name": last_name,
+        "age": age
+    }
+    return answer
+
+
+
+# Get the user's name and age
+user = get_user_name()
+# Print the user's name and age
+print(user)
