@@ -40,4 +40,17 @@ print(response.status_code)
 print(response.text)
 ```
 
+## Get 200 male users.
+
+Make a request to the randomuser.me API and get 200 male users and save to JSON file.
+
+JSON file structure:
+
+```JSON
+{
+    "results":[
+        {"first_name":"John", "last_name":"Doe","age":25},
+        {"first_name":"User", "last_name":"User","age":21}
+    ]
+}
 
