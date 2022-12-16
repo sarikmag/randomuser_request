@@ -28,3 +28,13 @@ def get_user_name():
 
 # Define users list
 users = []
+
+# Get 10 users
+for i in range(10):
+    # Get the user's name and age
+    user = get_user_name()
+    # Add the user to the list
+    users.append(user)
+
+# Print the list of users
+print(users)
