@@ -15,6 +15,8 @@ def get_user_name():
     last_name = results[0]["name"]["last"]
     # Get the age
     age = results[0]["dob"]["age"]
+    # Get the user's gender
+    gender = results[0]['gender']
 
     # Return the user's name and age
     answer = {
@@ -22,21 +24,22 @@ def get_user_name():
         "last_name": last_name,
         "age": age
     }
-    return answer
+    return gender,answer
 
 
 
 # Define users list
 users = []
-number_of_requests = 10
+number_of_requests = 20
 # Get 10 users
 for i in range(number_of_requests):
     # Get the user's name and age
     # Print request info
     print(f'Request: [{number_of_requests}/{i+1}]')
-    user = get_user_name()
-    # Add the user to the list
-    users.append(user)
+    gender,user = get_user_name()
+    # Add the user to the list if the user male
+    if gender=='male':
+        users.append(user)
 
 # Print the list of users
-print(users)
+print(len(users))
