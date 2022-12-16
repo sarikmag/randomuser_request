@@ -31,13 +31,15 @@ def get_user_name():
 # Define users list
 users = []
 number_of_requests = 20
+number_of_male=1
 # Get 10 users
-for i in range(number_of_requests):
+while number_of_male!=number_of_requests:
     # Get the user's name and age
     # Print request info
-    print(f'Request: [{number_of_requests}/{i+1}]')
+    
     gender,user = get_user_name()
     # Add the user to the list if the user male
     if gender=='male':
+        print(f'Request: [{number_of_requests}/{number_of_male}]')
         users.append(user)
-
+        number_of_male+=1
