@@ -47,6 +47,6 @@ while number_of_male!=number_of_requests:
 
         number_of_male+=1
 
-        number_of_requests += 1
-        print(f'Request: [{number_of_requests}/{10}]')
+   
+     
 print(users)
