@@ -16,7 +16,7 @@ source venv/bin/activate
 for windows
 
 ```bash
-venv\Scripts\activate
+source venv\Scripts\activate
 ```
 
 ## Install the requirements
