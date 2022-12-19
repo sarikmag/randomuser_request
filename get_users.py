@@ -2,19 +2,22 @@
 import requests
 
 
-number_users = 5
+number_users = 15
 # URL to randomuser.me API
 query_string = {
-    'results':number_users
+    'results':number_users,
+    'gender':'female',
+    'nat':"us,fr"
 }
 url = f"https://randomuser.me/api"
 
 response = requests.get(url=url,params=query_string)
+print(response.url)
 data=response.json()
 
 results = data['results']
 
 for user in results:
-    print(user['name'])
+    print(user['nat'])
 
 
