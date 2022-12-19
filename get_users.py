@@ -4,9 +4,12 @@ import requests
 
 number_users = 5
 # URL to randomuser.me API
-url = f"https://randomuser.me/api?results={number_users}"
+query_string = {
+    'results':number_users
+}
+url = f"https://randomuser.me/api"
 
-response = requests.get(url=url)
+response = requests.get(url=url,params=query_string)
 data=response.json()
 
 results = data['results']
