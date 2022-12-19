@@ -1,6 +1,6 @@
 
 import requests
-
+from user import User
 
 number_users = 15
 # URL to randomuser.me API
@@ -18,6 +18,7 @@ data=response.json()
 results = data['results']
 
 for user in results:
-    print(user['nat'])
+    usr = User(user)
+    print(usr.phone)
 
 
