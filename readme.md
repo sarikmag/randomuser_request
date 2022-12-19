@@ -37,7 +37,7 @@ url = "https://randomuser.me/api/"
 response = requests.get(url)
 
 print(response.status_code)
-print(response.text)
+print(response.txt)
 ```
 
 ## Get 200 male users.
